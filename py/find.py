@@ -84,7 +84,7 @@ if __name__ == "__main__":
     end = time()
     runId = uuid()[:8]
     # write log to unique-id file
-    with f as open("processing.{}.log".format(runId), "w"):
+    with open("processing.{}.log".format(runId), "w") as f:
         f.write("Finised execution processing {} with {} threads\n\n".format(inFile, threadCount))
         # log time taken for housekeeping
         f.write("Time elapsed: {}\n".format(str(end - start)))
